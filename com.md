@@ -1,0 +1,136 @@
+# AI Agent Communication Protocol 🤖
+
+Bu dosya, projede çalışan AI agentların ortak karar alma ve iletişim protokolünü tanımlar.
+
+---
+
+## 📋 Aktif Agentlar
+
+| Agent ID | Rol | Sorumluluk Alanı |
+|----------|-----|------------------|
+| `CLAUDE-MAIN` | Lead Architect | Mimari kararlar, code review, entegrasyon |
+| `AGENT-2` | TBD | TBD |
+| `AGENT-3` | TBD | TBD |
+
+---
+
+## 🔄 İletişim Formatı
+
+### Karar Talebi (Decision Request)
+```
+## [DR-001] Karar Başlığı
+**Talep Eden**: Agent ID
+**Tarih**: YYYY-MM-DD
+**Durum**: OPEN | IN_DISCUSSION | RESOLVED
+
+### Konu
+Kararın ne hakkında olduğu
+
+### Seçenekler
+1. Seçenek A - Açıklama
+2. Seçenek B - Açıklama
+
+### Tartışma
+- [Agent ID] [Tarih]: Yorum...
+
+### Sonuç
+Alınan karar ve gerekçesi
+```
+
+### Bilgilendirme (Info Update)
+```
+## [INFO-001] Bilgi Başlığı
+**Yazan**: Agent ID
+**Tarih**: YYYY-MM-DD
+
+### İçerik
+Paylaşılan bilgi
+```
+
+---
+
+## 📜 Kurallar
+
+1. **Kod Değişiklikleri**: Majör değişikliklerden önce bu dosyada tartışma açılmalı
+2. **Çakışma Önleme**: Aynı dosya üzerinde çalışmadan önce bildirin
+3. **Mimari Kararlar**: Tüm agentların onayı gerekli
+4. **Acil Durumlar**: `[URGENT]` etiketi ile işaretleyin
+
+---
+
+## 🗂️ Aktif Tartışmalar
+
+### [DR-001] State Machine Implementasyonu
+**Talep Eden**: CLAUDE-MAIN
+**Tarih**: 2026-01-10
+**Durum**: OPEN
+
+#### Konu
+Player State Machine için hangi yaklaşım kullanılacak?
+
+#### Seçenekler
+1. **Pure C# State Machine** - Animator'dan bağımsız, tam kontrol
+2. **Animator + StateMachineBehaviour** - Unity native, görsel debug
+3. **Hybrid** - Animator animasyon için, ayrı FSM logic için
+
+#### Tartışma
+- [CLAUDE-MAIN] [2026-01-10]: Dead Cells tarzı combat için input buffering kritik. Pure C# daha fazla kontrol sağlar ama Animator görsel feedback için kullanılabilir. Hybrid yaklaşımı öneriyorum.
+
+#### Sonuç
+_Beklemede_
+
+---
+
+### [DR-002] Element Kombinasyon Sistemi
+**Talep Eden**: CLAUDE-MAIN
+**Tarih**: 2026-01-10
+**Durum**: OPEN
+
+#### Konu
+Element kombinasyonları nasıl hesaplanacak?
+
+#### Seçenekler
+1. **Lookup Table (Dictionary)** - O(1) erişim, önceden tanımlı
+2. **Runtime Calculation** - Dinamik, genişletilebilir
+3. **ScriptableObject Graph** - Görsel editör, designer-friendly
+
+#### Tartışma
+- [CLAUDE-MAIN] [2026-01-10]: Kombinasyon sayısı sınırlı olacaksa (4 element = max 6 ikili kombinasyon), Lookup Table yeterli. Ancak gelecekte genişleme için ScriptableObject Graph daha iyi.
+
+#### Sonuç
+_Beklemede_
+
+---
+
+## 📝 Bilgilendirmeler
+
+### [INFO-001] Proje Başlangıç Kararları
+**Yazan**: CLAUDE-MAIN
+**Tarih**: 2026-01-10
+
+#### İçerik
+Kullanıcı ile alınan temel kararlar:
+
+- **Engine**: Unity
+- **Oynanış**: 2D Side-scroller, Real-time
+- **Combat Referansı**: Dead Cells
+- **Element Sistemi**: 4 temel + kombinasyonlar
+- **Silah Sistemi**: Silahlar element alabilir, stat değiştirir
+- **Combo Sistemi**: Light/Heavy attack kombinasyonları
+- **Dash/Dodge**: I-frame destekli
+- **Progression**: Permadeath, Run-based
+- **Dungeon**: Procedural generation
+
+---
+
+## 🔖 Completed Decisions Archive
+
+_Henüz tamamlanmış karar yok_
+
+---
+
+## 📌 Notlar
+
+- Bu dosya her agent tarafından okunmalı ve güncellenmelidir
+- Yeni bir agent eklendiğinde "Aktif Agentlar" tablosunu güncelleyin
+- Karar numaraları (DR-XXX) ve bilgi numaraları (INFO-XXX) sıralı artmalıdır
