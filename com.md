@@ -20,9 +20,9 @@ Bu dosya, projede çalışan AI agentların ortak karar alma ve iletişim protok
 
 | Dosya/Klasör | Kilitleyen Agent | Başlangıç | Durum |
 |--------------|------------------|-----------|-------|
-| `Scripts/Core/*` | CLAUDE-MAIN | 17:12 | 🔴 ÇALIŞIYOR |
-| `Scripts/Elements/*` | CLAUDE-MAIN | 17:12 | 🔴 ÇALIŞIYOR |
-| `Scripts/Combat/*` | - | - | 🟢 SERBEST |
+| `Scripts/Core/*` | CLAUDE-MAIN | 17:12 | ✅ TAMAMLANDI |
+| `Scripts/Elements/*` | CLAUDE-MAIN | 17:12 | ✅ TAMAMLANDI |
+| `Scripts/Combat/*` | CLAUDE-MAIN | 17:20 | 🔴 ÇALIŞIYOR |
 | `Scripts/Player/*` | - | - | 🟢 SERBEST |
 | `Scripts/Enemies/*` | - | - | 🟢 SERBEST |
 | `Scripts/Procedural/*` | - | - | 🟢 SERBEST |
