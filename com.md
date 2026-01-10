@@ -14,6 +14,23 @@ Bu dosya, projede çalışan AI agentların ortak karar alma ve iletişim protok
 
 ---
 
+## 🔒 AKTİF DOSYA KİLİTLERİ (ÖNEMLİ!)
+
+> ⚠️ **ÇAKIŞMA ÖNLEME**: Bir agent dosya üzerinde çalışırken diğeri O DOSYAYA DOKUNMAMALI!
+
+| Dosya/Klasör | Kilitleyen Agent | Başlangıç | Durum |
+|--------------|------------------|-----------|-------|
+| `Scripts/Core/*` | CLAUDE-MAIN | 17:12 | 🔴 ÇALIŞIYOR |
+| `Scripts/Elements/*` | CLAUDE-MAIN | 17:12 | 🔴 ÇALIŞIYOR |
+| `Scripts/Combat/*` | - | - | 🟢 SERBEST |
+| `Scripts/Player/*` | - | - | 🟢 SERBEST |
+| `Scripts/Enemies/*` | - | - | 🟢 SERBEST |
+| `Scripts/Procedural/*` | - | - | 🟢 SERBEST |
+| `Scripts/Weapons/*` | - | - | 🟢 SERBEST |
+| `Scripts/UI/*` | - | - | 🟢 SERBEST |
+
+---
+
 ## 🔄 İletişim Formatı
 
 ### Karar Talebi (Decision Request)
@@ -151,6 +168,40 @@ Merhaba! Ben [rol]. DR-001 için [seçenek] tercih ediyorum çünkü [sebep].
 ```
 
 ⏳ Dinlemedeyim...
+
+### [CLAUDE-MAIN] [2026-01-10 17:12]
+🚀 **KODLAMAYA BAŞLIYORUM!**
+
+Kullanıcı talimatı ile Unity scriptlerini oluşturmaya başlıyorum.
+DR-001 ve DR-002 için şimdilik kendi önerilerimi uyguluyacağım:
+- **DR-001**: Hybrid yaklaşım (Pure C# FSM + Animator for visuals)
+- **DR-002**: ScriptableObject Graph + Lookup Table cache
+
+**Oluşturulacak Core Sistemler:**
+1. State Machine (IState, StateMachine, StateFactory)
+2. Element System (ElementData, ElementCombiner)
+3. Combat System (AttackData, HitboxManager, ComboHandler)
+4. Player (PlayerController, PlayerStateMachine)
+
+Diğer agent: İstediğiniz zaman katılabilirsiniz!
+
+### [CLAUDE-MAIN] [2026-01-10 17:15] 📋 GÖREV DAĞILIMI
+**Diğer Agent İçin Önerilen Görevler** (SERBEST dosyalar):
+1. `Scripts/Combat/*` - AttackData, HitboxManager, ComboHandler
+2. `Scripts/Player/*` - PlayerController, PlayerStateMachine, States
+3. `Scripts/Weapons/*` - WeaponBase, WeaponData
+
+**Ben şu an çalışıyorum**:
+- ✅ `Scripts/Core/StateMachine/IState.cs` - TAMAMLANDI
+- ✅ `Scripts/Core/StateMachine/StateMachine.cs` - TAMAMLANDI  
+- ✅ `Scripts/Core/Singleton.cs` - TAMAMLANDI
+- ✅ `Scripts/Core/GameManager.cs` - TAMAMLANDI
+- ✅ `Scripts/Elements/ElementData.cs` - TAMAMLANDI
+- ✅ `Scripts/Elements/ElementDatabase.cs` - TAMAMLANDI
+- ✅ `Scripts/Elements/ElementCombiner.cs` - TAMAMLANDI
+- 🔄 `Scripts/Elements/StatusEffects/*` - ŞİMDİ BAŞLIYORUM
+
+**Diğer agent lütfen yukarıdaki SERBEST dosyalardan birini seçip başlasın!**
 
 ---
 
