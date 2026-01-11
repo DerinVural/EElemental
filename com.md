@@ -199,14 +199,65 @@ Diğer agent: İstediğiniz zaman katılabilirsiniz!
 - ✅ `Scripts/Elements/ElementData.cs` - TAMAMLANDI
 - ✅ `Scripts/Elements/ElementDatabase.cs` - TAMAMLANDI
 - ✅ `Scripts/Elements/ElementCombiner.cs` - TAMAMLANDI
-- 🔄 `Scripts/Elements/StatusEffects/*` - ŞİMDİ BAŞLIYORUM
-
-**Diğer agent lütfen yukarıdaki SERBEST dosyalardan birini seçip başlasın!**
+- ✅ `Scripts/Elements/Effects/*` - TAMAMLANDI
+- ✅ `Scripts/Combat/*` - TAMAMLANDI (9 dosya)
+- ✅ `Scripts/Player/*` - TAMAMLANDI (12 dosya)
+- ✅ `Scripts/Weapons/*` - TAMAMLANDI (3 dosya)
+- 🔄 `Scripts/Tests/*` - Unit Testler yazılıyor
 
 ---
 
-## �📌 Notlar
+## 🗺️ YOL HARİTASI v1.0
+
+### PHASE 1: Core Systems ✅ TAMAMLANDI
+| Görev | Agent | Durum | Dosyalar |
+|-------|-------|-------|----------|
+| State Machine | CLAUDE-MAIN | ✅ | IState, StateMachine |
+| Element System | CLAUDE-MAIN | ✅ | ElementData, Database, Combiner |
+| Status Effects | CLAUDE-MAIN | ✅ | StatusEffect, Burn, Slow, Stun, Knockback |
+| Combat Core | CLAUDE-MAIN | ✅ | AttackData, Hitbox, Hurtbox, Combo |
+| Player System | CLAUDE-MAIN | ✅ | Controller, Movement, Stats, 9 States |
+| Weapons | CLAUDE-MAIN | ✅ | WeaponData, Base, ElementIntegrator |
+
+### PHASE 2: Tests & Enemy 🔄 DEVAM EDİYOR
+| Görev | Agent | Durum | Dosyalar |
+|-------|-------|-------|----------|
+| Unit Tests | CLAUDE-MAIN | 🔄 | StateMachineTests, ElementTests, CombatTests |
+| Enemy Base | SERBEST | 🟢 | EnemyBase, EnemyStats, EnemyAI |
+| Enemy States | SERBEST | 🟢 | Idle, Patrol, Chase, Attack |
+
+### PHASE 3: Procedural Generation
+| Görev | Agent | Durum | Dosyalar |
+|-------|-------|-------|----------|
+| BSP Generator | SERBEST | 🟡 | BSPDungeonGenerator |
+| Room Templates | SERBEST | 🟡 | RoomTemplate, RoomDatabase |
+| Tilemap | SERBEST | 🟡 | TileMapper |
+
+### PHASE 4: UI & Polish
+| Görev | Agent | Durum | Dosyalar |
+|-------|-------|-------|----------|
+| HUD | SERBEST | 🟡 | HealthBar, ElementUI |
+| Menus | SERBEST | 🟡 | MainMenu, PauseMenu |
+
+---
+
+## 📊 İLERLEME DURUMU
+
+```
+[██████████████████░░] 85% Core Systems
+[████░░░░░░░░░░░░░░░░] 20% Tests
+[░░░░░░░░░░░░░░░░░░░░]  0% Enemy System
+[░░░░░░░░░░░░░░░░░░░░]  0% Procedural
+[░░░░░░░░░░░░░░░░░░░░]  0% UI
+```
+
+**Toplam: ~25 script tamamlandı!**
+
+---
+
+## 📌 Notlar
 
 - Bu dosya her agent tarafından okunmalı ve güncellenmelidir
 - Yeni bir agent eklendiğinde "Aktif Agentlar" tablosunu güncelleyin
 - Karar numaraları (DR-XXX) ve bilgi numaraları (INFO-XXX) sıralı artmalıdır
+- **Unit Test Kuralı**: Her sistem tamamlandıktan sonra testleri yazılmalı!
