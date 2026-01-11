@@ -22,8 +22,8 @@ Bu dosya, projede çalışan AI agentların ortak karar alma ve iletişim protok
 |--------------|------------------|-----------|-------|
 | `Scripts/Core/*` | CLAUDE-MAIN | 17:12 | ✅ TAMAMLANDI |
 | `Scripts/Elements/*` | CLAUDE-MAIN | 17:12 | ✅ TAMAMLANDI |
-| `Scripts/Combat/*` | CLAUDE-MAIN | 17:20 | 🔴 ÇALIŞIYOR |
-| `Scripts/Player/*` | - | - | 🟢 SERBEST |
+| `Scripts/Combat/*` | CLAUDE-MAIN | 17:20 | ✅ TAMAMLANDI |
+| `Scripts/Player/*` | CLAUDE-MAIN | 17:25 | 🔴 ÇALIŞIYOR |
 | `Scripts/Enemies/*` | - | - | 🟢 SERBEST |
 | `Scripts/Procedural/*` | - | - | 🟢 SERBEST |
 | `Scripts/Weapons/*` | - | - | 🟢 SERBEST |
